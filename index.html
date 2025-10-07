@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RFP SCHOOL - Website Interaktif</title>
+    <!-- Memuat Tailwind CSS untuk styling modern dan responsif -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Konfigurasi font Inter -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f7f9fb; /* Warna latar belakang lembut */
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+
+    <!-- Header & Navigasi -->
+    <header class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo/Nama Sekolah (Diperbarui menjadi RFP SCHOOL) -->
+                <a href="#" class="text-2xl font-extrabold text-indigo-700 tracking-wider">
+                    <span class="text-3xl">RFP</span><span class="hidden sm:inline"> SCHOOL</span>
+                </a>
+                
+                <!-- Menu Desktop -->
+                <nav class="hidden md:flex space-x-8">
+                    <a href="#beranda" class="text-gray-600 hover:text-indigo-600 transition duration-300 font-medium">Beranda</a>
+                    <a href="#tentang" class="text-gray-600 hover:text-indigo-600 transition duration-300 font-medium">Tentang Kami</a>
+                    <a href="#program" class="text-gray-600 hover:text-indigo-600 transition duration-300 font-medium">Program</a>
+                    <a href="#kontak" class="text-gray-600 hover:text-indigo-600 transition duration-300 font-medium">Kontak</a>
+                </nav>
+                
+                <!-- Tombol Mobile Menu (Hamburger Icon) -->
+                <button id="mobile-menu-button" class="md:hidden p-2 text-gray-600 hover:text-indigo-600 focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path id="menu-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu (Awalnya Tersembunyi) -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 py-2">
+            <a href="#beranda" class="block px-4 py-2 text-sm text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 transition duration-150">Beranda</a>
+            <a href="#tentang" class="block px-4 py-2 text-sm text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 transition duration-150">Tentang Kami</a>
+            <a href="#program" class="block px-4 py-2 text-sm text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 transition duration-150">Program</a>
+            <a href="#kontak" class="block px-4 py-2 text-sm text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 transition duration-150">Kontak</a>
+        </div>
+    </header>
+
+    <main>
+        
+        <!-- Bagian 1: Hero Section (Beranda) -->
+        <section id="beranda" class="py-20 md:py-32 bg-indigo-50">
+            <div class="container mx-auto px-4 text-center">
+                <h1 class="text-4xl md:text-6xl font-extrabold text-indigo-800 mb-4 leading-tight">
+                    Wujudkan Masa Depan Cemerlang!
+                </h1>
+                <p class="text-xl md:text-2xl text-gray-600 mb-8 max-w-3xl mx-auto">
+                    Selamat datang di **RFP SCHOOL**, tempat inspirasi bertemu dengan inovasi.
+                </p>
+                <a href="#program" class="inline-block px-8 py-3 text-lg font-bold text-white bg-indigo-600 rounded-full shadow-lg hover:bg-indigo-700 transition duration-300 transform hover:scale-105">
+                    Lihat Program Kami
+                </a>
+            </div>
+        </section>
+
+        <!-- Bagian 2: Tentang Kami -->
+        <section id="tentang" class="py-16 md:py-24">
+            <div class="container mx-auto px-4">
+                <div class="max-w-4xl mx-auto text-center">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6">Mengenal Sekolah Kami</h2>
+                    <p class="text-lg text-gray-600 mb-8">
+                        RFP SCHOOL didirikan pada tahun 1995 dengan visi mencetak generasi yang cerdas, berkarakter, dan siap menghadapi tantangan global. Kami percaya bahwa setiap siswa memiliki potensi unik yang harus dikembangkan.
+                    </p>
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-8 mt-10">
+                        <!-- Kartu Nilai 1 -->
+                        <div class="bg-white p-6 rounded-xl shadow-md transition duration-300 hover:shadow-xl border border-indigo-100">
+                            <div class="text-indigo-600 text-3xl mb-3">🎓</div>
+                            <h3 class="text-xl font-semibold mb-2">Pendidikan Berkualitas</h3>
+                            <p class="text-gray-500 text-sm">Kurikulum terbaru dengan fokus pada pemecahan masalah.</p>
+                        </div>
+                        <!-- Kartu Nilai 2 -->
+                        <div class="bg-white p-6 rounded-xl shadow-md transition duration-300 hover:shadow-xl border border-indigo-100">
+                            <div class="text-indigo-600 text-3xl mb-3">💡</div>
+                            <h3 class="text-xl font-semibold mb-2">Inovasi Digital</h3>
+                            <p class="text-gray-500 text-sm">Pembelajaran didukung teknologi dan lab komputer canggih.</p>
+                        </div>
+                        <!-- Kartu Nilai 3 -->
+                        <div class="bg-white p-6 rounded-xl shadow-md transition duration-300 hover:shadow-xl border border-indigo-100">
+                            <div class="text-indigo-600 text-3xl mb-3">🤝</div>
+                            <h3 class="text-xl font-semibold mb-2">Lingkungan Suportif</h3>
+                            <p class="text-gray-500 text-sm">Guru dan staf yang berdedikasi tinggi untuk mendukung siswa.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Bagian 3: Program Unggulan -->
+        <section id="program" class="py-16 md:py-24 bg-gray-50">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-12">Program Unggulan Kami</h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Kartu Program 1 -->
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden border border-indigo-200">
+                        <div class="p-6">
+                            <div class="text-2xl text-indigo-600 mb-3">💻</div>
+                            <h3 class="text-2xl font-bold mb-3">Kelas Coding & Robotika</h3>
+                            <p class="text-gray-600 mb-4 text-sm">
+                                Mengembangkan logika berpikir dan keterampilan teknologi masa depan.
+                            </p>
+                            <a href="#" class="text-indigo-600 font-semibold hover:text-indigo-800 transition duration-300">Selengkapnya &rarr;</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Kartu Program 2 -->
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden border border-indigo-200">
+                        <div class="p-6">
+                            <div class="text-2xl text-indigo-600 mb-3">🎤</div>
+                            <h3 class="text-2xl font-bold mb-3">Klub Debat Bahasa Inggris</h3>
+                            <p class="text-gray-600 mb-4 text-sm">
+                                Melatih kemampuan public speaking dan berpikir kritis dalam Bahasa Inggris.
+                            </p>
+                            <a href="#" class="text-indigo-600 font-semibold hover:text-indigo-800 transition duration-300">Selengkapnya &rarr;</a>
+                        </div>
+                    </div>
+
+                    <!-- Kartu Program 3 -->
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden border border-indigo-200">
+                        <div class="p-6">
+                            <div class="text-2xl text-indigo-600 mb-3">🎨</div>
+                            <h3 class="text-2xl font-bold mb-3">Ekstrakurikuler Seni Budaya</h3>
+                            <p class="text-gray-600 mb-4 text-sm">
+                                Wadah bagi siswa untuk mengekspresikan diri di bidang musik, tari, dan lukis.
+                            </p>
+                            <a href="#" class="text-indigo-600 font-semibold hover:text-indigo-800 transition duration-300">Selengkapnya &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Bagian 4: Formulir Kontak Cepat -->
+        <section id="kontak" class="py-16 md:py-24 bg-white">
+            <div class="container mx-auto px-4">
+                <div class="max-w-2xl mx-auto">
+                    <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-10">Hubungi Kami</h2>
+                    
+                    <form action="#" class="space-y-6 bg-indigo-50 p-8 rounded-xl shadow-2xl border border-indigo-200">
+                        <div>
+                            <label for="nama" class="block text-sm font-medium text-gray-700 mb-1">Nama Lengkap</label>
+                            <input type="text" id="nama" name="nama" placeholder="Masukkan nama Anda"
+                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-indigo-500 focus:border-indigo-500 transition duration-150">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email</label>
+                            <input type="email" id="email" name="email" placeholder="contoh@email.com"
+                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-indigo-500 focus:border-indigo-500 transition duration-150">
+                        </div>
+                        <div>
+                            <label for="pesan" class="block text-sm font-medium text-gray-700 mb-1">Pesan Anda</label>
+                            <textarea id="pesan" name="pesan" rows="4" placeholder="Tuliskan pesan atau pertanyaan Anda di sini..."
+                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-indigo-500 focus:border-indigo-500 transition duration-150"></textarea>
+                        </div>
+                        <button type="submit" class="w-full py-3 px-4 font-bold text-white bg-indigo-600 rounded-lg hover:bg-indigo-700 transition duration-300 transform hover:shadow-lg">
+                            Kirim Pesan
+                        </button>
+                    </form>
+
+                    <div class="mt-8 text-center text-gray-600">
+                        <p>Atau hubungi kami langsung:</p>
+                        <p class="font-semibold mt-2">📧 Email: info@rfpschool.sch.id</p>
+                        <p class="font-semibold">📞 Telepon: (021) 1234 5678</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-10">
+        <div class="container mx-auto px-4 text-center">
+            <p class="mb-4 text-lg font-semibold text-indigo-300">RFP SCHOOL</p>
+            <p class="text-sm text-gray-400">Jl. Pendidikan No. 10, Kota Cita-cita, Indonesia</p>
+            <p class="text-sm text-gray-500 mt-4">&copy; 2025 RFP SCHOOL. Hak Cipta Dilindungi.</p>
+        </div>
+    </footer>
+
+    <!-- Logika JavaScript untuk Interaktivitas Mobile Menu -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Dapatkan elemen tombol dan menu
+            const menuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const menuIcon = document.getElementById('menu-icon');
+
+            // Fungsi untuk mengaktifkan/menonaktifkan menu
+            const toggleMenu = () => {
+                const isHidden = mobileMenu.classList.toggle('hidden');
+                
+                // Mengubah icon dari Hamburger ke Close (X) dan sebaliknya
+                if (isHidden) {
+                    // Menu tersembunyi, tampilkan icon Hamburger
+                    menuIcon.setAttribute('d', 'M4 6h16M4 12h16m-7 6h7');
+                } else {
+                    // Menu terlihat, tampilkan icon Close (X)
+                    menuIcon.setAttribute('d', 'M6 18L18 6M6 6l12 12');
+                }
+            };
+
+            // Tambahkan event listener ke tombol
+            menuButton.addEventListener('click', toggleMenu);
+
+            // Tutup menu jika salah satu link di menu mobile di klik
+            const mobileLinks = mobileMenu.querySelectorAll('a');
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    // Cek apakah menu sedang terbuka (tidak ada class 'hidden')
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        toggleMenu(); // Tutup menu
+                    }
+                });
+            });
+
+            // Logika sederhana untuk animasi scroll ke bagian yang dituju
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    // Non-aktifkan default action link
+                    e.preventDefault();
+                    
+                    // Ambil target ID (misal: "#tentang")
+                    const targetId = this.getAttribute('href');
+                    const targetElement = document.querySelector(targetId);
+
+                    if (targetElement) {
+                        // Lakukan smooth scroll
+                        targetElement.scrollIntoView({
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+            
+            // Tambahkan event listener untuk formulir kontak
+            const contactForm = document.querySelector('#kontak form');
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault(); // Mencegah form dikirim secara default
+                // Ini adalah simulasi respons interaktif setelah form disubmit
+                const submitButton = contactForm.querySelector('button[type="submit"]');
+                submitButton.textContent = 'Pesan Terkirim! Terima Kasih.';
+                submitButton.classList.remove('bg-indigo-600', 'hover:bg-indigo-700');
+                submitButton.classList.add('bg-green-600');
+                
+                // Setel ulang tombol setelah 3 detik
+                setTimeout(() => {
+                    submitButton.textContent = 'Kirim Pesan';
+                    submitButton.classList.remove('bg-green-600');
+                    submitButton.classList.add('bg-indigo-600', 'hover:bg-indigo-700');
+                    contactForm.reset(); // Reset form
+                }, 3000);
+            });
+        });
+    </script>
+</body>
+</html>
